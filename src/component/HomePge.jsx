@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import NavigationCar from './NavigationCar'
 
 const HomePge = () => {
   return (
     <div>
-
+        <NavigationCar/>
         <div className="container mt-5">
       <div className="card shadow-lg border-0 p-5 text-center">
         <h1 className="display-5 fw-bold text-primary">
