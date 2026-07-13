@@ -14,38 +14,25 @@ const AddCar = () => {
     city: "",
     availability_status: "Available",
   })
-  const [message, setMessage] = useState("");
-  const [error, setError] = useState("");
+  
 
   const inputHandler = (event) => {
     setInput({ ...input, [event.target.name]: event.target.value });
   };
 
   const readValues = () => {
-    console.log(input)
-    axios.post("https://host-demo-app.onrender.com/api/add-car", input)
-      .then((response) => {
-        setMessage(response.data.message);
-        setError("");
+    console.log(input);
 
-        setInput({
-          registration_number: "",
-          brand: "",
-          model: "",
-          vehicle_type: "",
-          fuel_type: "",
-          transmission: "",
-          seating_capacity: "",
-          rent_per_day: "",
-          city: "",
-          availability_status: "Available",
-        });
-      })
-      .catch((err) => {
-        setError(err.response.data.message);
-        setMessage("");
-      })
-  }
+    axios.post("https://host-demo-app.onrender.com/api/add-car", input)
+        .then((response) => {
+            console.log(response.data);
+            alert("Car added successfully");
+        })
+        .catch((err) => {
+            console.log(err.response.data);
+            console.log(err.response.status);
+        })
+}
   return (
     
 
