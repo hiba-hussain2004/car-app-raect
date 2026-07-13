@@ -29,7 +29,7 @@ const HomePge = () => {
             </button>
           </Link>
 
-          <Link to="/cars">
+          <Link to="/view">
             <button className="btn btn-outline-primary btn-lg">
               View Cars
             </button>

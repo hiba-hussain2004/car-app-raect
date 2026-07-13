@@ -6,6 +6,7 @@ import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HomePge from './component/HomePge'
 import AddCar from './component/AddCar'
+import ViewCar from './component/ViewCar'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +18,7 @@ function App() {
 
       <Route path="/" element={<HomePge />} />
        <Route path="/add" element={<AddCar />} />
+       <Route  path="/view" element={<ViewCar/>} />
 
       </Routes>
       
