@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import NavigationCar from './NavigationCar'
 
 const ViewCar = () => {
      const [data,changeData]=useState([])
@@ -20,7 +21,7 @@ const ViewCar = () => {
     )
   return (
     <div>
-
+        <NavigationCar/>
         <div className="container mt-4">
       <h2 className="text-center mb-4">View All Cars</h2>
 

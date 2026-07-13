@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import NavigationCar from './NavigationCar';
 
 const AddCar = () => {
     const [input, setInput] = useState({
@@ -14,7 +15,8 @@ const AddCar = () => {
     city: "",
     availability_status: "Available",
   })
-  
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
 
   const inputHandler = (event) => {
     setInput({ ...input, [event.target.name]: event.target.value });
@@ -35,7 +37,9 @@ const AddCar = () => {
 }
   return (
     
-
+      <div>
+        <NavigationCar/>
+    
         <div className="container mt-4">
       <div className="card shadow p-4">
         <h2 className="text-center mb-4">Add Car</h2>
@@ -182,7 +186,7 @@ const AddCar = () => {
     
     </div>
 
-   
+     </div>
   )
 }
 
