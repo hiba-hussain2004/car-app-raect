@@ -23,7 +23,7 @@ const HomePge = () => {
 
         <div className="mt-4">
            
-          <Link to="/add-car">
+          <Link to="/add">
             <button className="btn btn-primary btn-lg me-3">
               Add Car
             </button>
